@@ -53,10 +53,48 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var tbody = document.querySelector('#coffees');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+// tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
+
+
+document.querySelector("#roast-selection-by-style").addEventListener("change", function(event){
+    // console.log(event.target);
+    document.querySelector(".result").innerHTML =  ;
+});
+
+// Mkyong find
+// <select id="country">
+//     <option value="None">-- Select --</option>
+//     <option value="ID001">China</option>
+//     <option value="ID002" selected>United State</option>
+//     <option value="ID003">Malaysia</option>
+// </select>
+//
+// <script>
+//
+//     function GetSelectedValue(){
+//         var e = document.getElementById("country");
+//         var result = e.options[e.selectedIndex].value;
+//
+//         document.getElementById("result").innerHTML = result;
+// }
+//
+//     function GetSelectedText(){
+//     var e = document.getElementById("country");
+//     var result = e.options[e.selectedIndex].text;
+//
+//     document.getElementById("result").innerHTML = result;
+// }
+//
+// </script>
+//
+// <br/>
+// <br/>
+// <button type="button" onClick="GetSelectedValue()">Get Selected Value</button>
+//
+// <button type="button" onClick="GetSelectedText()">Get Selected Text</button>
