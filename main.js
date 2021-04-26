@@ -62,10 +62,14 @@ var roastSelection = document.querySelector('#roast-selection');
 // submitButton.addEventListener('click', updateCoffees);
 
 
-document.querySelector("#roast-selection-by-style").addEventListener("change", function(event){
-    // console.log(event.target);
-    document.querySelector(".result").innerHTML =  ;
-});
+
+
+//Dom Events Lec
+
+// document.querySelector("#roast-selection-by-style").addEventListener("change", function(event){
+//     // console.log(event.target);
+//     document.querySelector(".result").innerHTML =  ;
+// });
 
 // Mkyong find
 // <select id="country">
