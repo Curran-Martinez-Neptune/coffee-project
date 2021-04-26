@@ -2,33 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Fancy Coffee Company©</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Coffee!</h1>
 
+<!--OG Form-->
+
     <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
+        <form>
+            <label for="roast-selection-by-style"></label>
+            <select id="roast-selection-by-style">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <input id="submit" type="submit" />
+        </form>
+        <div class="roast-selection-by-name">
+            <label for="roast-selection-by-name">Coffee Name</label>
+            <input type="Roast" class="Roast" id="roast-selection-by-name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
 
+<!--OG Table-->
+
+    <div>
+        <h2>Light City</h2>
+        <p>light</p>
+    </div>
+
+    <div>
+        <h2>Half City</h2>
+        <p>light</p>
+    </div>
+
+    <div>
+        <h2>Cinnamon</h2>
+        <p>light</p>
+    </div>
+    <div>
+        <h2>City</h2>
+        <p>Medium</p>
+    </div>
+    <div>
+        <h2>American</h2>
+        <p>Medium</p>
+    </div>
+    <div>
+        <h2>Breakfast</h2>
+        <p>Medium</p>
+    </div>
+    <div>
+        <h2>High</h2>
+        <p>dark</p>
+    </div>
+    <div>
+        <h2>Continental</h2>
+        <p>dark</p>
+    </div>
+    <div>
+        <h2>New Orleans</h2>
+        <p>dark</p>
+    </div>
+    <div>
+        <h2>European</h2>
+        <p>dark</p>
+    </div>
+    <div>
+        <h2>Espresso</h2>
+        <p>dark</p>
+    </div>
+    <div>
+        <h2>Viennese</h2>
+        <p>dark</p>
+    </div>
+    <div>
+        <h2>Italian</h2>
+        <p>dark</p>
+    </div>
+    <div>
+        <h2>French</h2>
+        <p>dark</p>
+    </div>
+
+
+<!--    var coffees = [-->
+<!--    {id: 1, name: 'Light City', roast: 'light'},-->
+<!--    {id: 2, name: 'Half City', roast: 'light'},-->
+<!--    {id: 3, name: 'Cinnamon', roast: 'light'},-->
+<!--    {id: 4, name: 'City', roast: 'medium'},-->
+<!--    {id: 5, name: 'American', roast: 'medium'},-->
+<!--    {id: 6, name: 'Breakfast', roast: 'medium'},-->
+<!--    {id: 7, name: 'High', roast: 'dark'},-->
+<!--    {id: 8, name: 'Continental', roast: 'dark'},-->
+<!--    {id: 9, name: 'New Orleans', roast: 'dark'},-->
+<!--    {id: 10, name: 'European', roast: 'dark'},-->
+<!--    {id: 11, name: 'Espresso', roast: 'dark'},-->
+<!--    {id: 12, name: 'Viennese', roast: 'dark'},-->
+<!--    {id: 13, name: 'Italian', roast: 'dark'},-->
+<!--    {id: 14, name: 'French', roast: 'dark'},-->
+
+<!--OG JS-->
     <script src="main.js"></script>
 </body>
 </html>
