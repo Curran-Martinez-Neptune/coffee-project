@@ -9,6 +9,11 @@ function renderCoffee(coffee) {
 
     return html;
 }
+var addCoffee = document.getElementById("roast-add");
+addCoffee.addEventListener("click", function(){
+    alert("It works");
+})
+
 
 function renderCoffees(coffees) {
     var html = '';
