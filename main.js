@@ -1,6 +1,7 @@
 "use strict"
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+//Coffees Array
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -18,6 +19,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+//Coffee Table (haha)
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
@@ -26,10 +28,11 @@ function renderCoffee(coffee) {
 
     return html;
 }
-// var addCoffee = document.getElementById("roast-add");
-// addCoffee.addEventListener("click", function(){
-//     alert("It works");
-// })
+
+var addCoffee = document.getElementById("roast-add");
+addCoffee.addEventListener("click", function(){
+    alert("It works");
+})
 
 
 function renderCoffees(coffees) {
