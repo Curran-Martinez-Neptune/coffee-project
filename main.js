@@ -19,6 +19,8 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+// document.getElementById("coffees").style.columnCount="2";
+
 //Coffee Table (haha)
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
