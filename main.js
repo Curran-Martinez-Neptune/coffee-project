@@ -1,6 +1,7 @@
 "use strict"
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+//Coffees Array
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -16,21 +17,20 @@ var coffees = [
     {id: 12, name: 'Viennese', roast: 'dark'},
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
-]
+];
 
 // document.getElementById("coffees").style.columnCount="2";
 
 //Coffee Table (haha)
-
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<h3>' + coffee.name + '</h3>';
+    html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
+
     return html;
 }
 
-// Add roast button, WIP, didnt get very far. Need to figure out how to add submissions to list.
 var addCoffee = document.getElementById("roast-add");
 addCoffee.addEventListener("click", function(){
     alert("It works");
@@ -44,11 +44,26 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+//
+// function updateCoffees(e) {
+//     e.preventDefault(); // don't submit the form, we just want to update the data
+//     var selectedRoast = roastSelection.value;
+//     var filteredCoffees = [];
+//     coffees.forEach(function(coffee) {
+//         if (coffee.roast === selectedRoast) {
+//             filteredCoffees.push(coffee);
+//         }
+//     });
+//     tbody.innerHTML = renderCoffees(filteredCoffees);
+// }
+
 
 // Submit button Auto
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = nameSelection.value;
+
+
     var roastCategory = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -64,8 +79,9 @@ function updateCoffees(e) {
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+
 var nameSelection = document.querySelector('#name-selection')
 // <button type="button" onClick="GetSelectedValue()">Get Selected Value</button>
 
@@ -76,3 +92,46 @@ tbody.innerHTML = renderCoffees(coffees);
 
 roastSelection.addEventListener('change', updateCoffees);
 nameSelection.addEventListener('keyup', updateCoffees);
+
+
+
+
+
+//Dom Events Lec
+
+// document.querySelector("#roast-selection-by-style").addEventListener("change", function(event){
+//     // console.log(event.target);
+//     document.querySelector(".result").innerHTML =  ;
+// });
+
+// Mkyong find
+// <select id="country">
+//     <option value="None">-- Select --</option>
+//     <option value="ID001">China</option>
+//     <option value="ID002" selected>United State</option>
+//     <option value="ID003">Malaysia</option>
+// </select>
+//
+// <script>
+//
+//     function GetSelectedValue(){
+//         var e = document.getElementById("country");
+//         var result = e.options[e.selectedIndex].value;
+//
+//         document.getElementById("result").innerHTML = result;
+// }
+//
+//     function GetSelectedText(){
+//     var e = document.getElementById("country");
+//     var result = e.options[e.selectedIndex].text;
+//
+//     document.getElementById("result").innerHTML = result;
+// }
+//
+// </script>
+//
+// <br/>
+// <br/>
+// <button type="button" onClick="GetSelectedValue()">Get Selected Value</button>
+//
+// <button type="button" onClick="GetSelectedText()">Get Selected Text</button>
