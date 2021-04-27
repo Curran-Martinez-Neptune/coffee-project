@@ -16,15 +16,16 @@
     <div class="row justify-content-center mx-auto">
         <h1 class="text-center col-12">Fancy Coffee!</h1>
         <hr>
-    <form  class="col-8 mx-auto p-4">
-        <label for="roast-selection"></label>
+
+        <form  class="col-8 mx-auto p-4">
+            <label for="name-selection">Search for your Favorite Roast here!</label>
+            <label for="roast-selection"></label>
         <select id="roast-selection">
             <option value="all">all</option>
             <option value="light">light</option>
             <option value="medium">medium</option>
             <option value="dark">dark</option>
         </select>
-        <label for="name-selection">Search for your Favorite Roast here!</label>
         <br>
         <input type="text" class="Roast" id="name-selection">
         <button id="submit" type="submit" class="btn btn-primary">Submit</button>
@@ -32,19 +33,18 @@
     </div>
 
 <!--Add a Coffee Form-->
+<!--WIP-->
 
 <div class="row justify-content-center mx-auto">
-    <h1 class="text-center col-12">Don't see your favorite?</h1>
-<!--    <h1 class="text-center col-12">Add a Roast here</h1>-->
-<!--    <hr>-->
+    <h2 class="text-center col-12">Don't see your favorite?</h2>
     <form class="col-8 mx-auto p-4">
+        <label for="roast-add-name">Add a Roast here!</label>
         <label for="roast-add-coffee"></label>
             <select id="roast-add-coffee">
                 <option>light</option>
                 <option>medium</option>
                 <option>dark</option>
             </select>
-        <label for="roast-add-name">Add a Roast here!</label>
         <br>
         <input type="text" class="Roast" id="roast-add-name">
         <button id="roast-add" type="submit"  class="btn btn-primary display-inline-block">Submit</button>
@@ -55,8 +55,6 @@
 <!--Roast Divs-->
 
 <div class="row col-6" id="coffees"></div>
-
-<!--<script>document.getElementById("7").innerHTML = </script>-->
 
 <!--OG JS-->
 

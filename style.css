@@ -25,17 +25,22 @@ div {
 
 h2 {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-right: 5px;
 }
-
 #coffees {
     display:flex;
     flex-direction: column-reverse;
-   margin-left: 10px;
+    margin-left: 10px;
 }
 
-
-.dark {
+#coffees.roast.dark {
     color: hotpink
 }
 
