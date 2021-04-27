@@ -1,5 +1,23 @@
 "use strict"
 
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+var coffees = [
+    {id: 1, name: 'Light City', roast: 'light'},
+    {id: 2, name: 'Half City', roast: 'light'},
+    {id: 3, name: 'Cinnamon', roast: 'light'},
+    {id: 4, name: 'City', roast: 'medium'},
+    {id: 5, name: 'American', roast: 'medium'},
+    {id: 6, name: 'Breakfast', roast: 'medium'},
+    {id: 7, name: 'High', roast: 'dark'},
+    {id: 8, name: 'Continental', roast: 'dark'},
+    {id: 9, name: 'New Orleans', roast: 'dark'},
+    {id: 10, name: 'European', roast: 'dark'},
+    {id: 11, name: 'Espresso', roast: 'dark'},
+    {id: 12, name: 'Viennese', roast: 'dark'},
+    {id: 13, name: 'Italian', roast: 'dark'},
+    {id: 14, name: 'French', roast: 'dark'},
+];
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h2>' + coffee.name + '</h2>';
@@ -39,46 +57,37 @@ function renderCoffees(coffees) {
 function updateCoffeesAuto(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = nameSelection.value;
-    var selectedType = roastSelection.value;
+
+
+    var roastCategory = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if ((coffee.name.toLowerCase()).includes(selectedRoast.toLowerCase()) && coffee.roast === selectedType) {
+        if ((coffee.name.toLowerCase()).includes(selectedRoast.toLowerCase()) && coffee.roast === roastCategory) {
             filteredCoffees.push(coffee);
-        } else if (selectedType === 'all') {
+        } else if (roastCategory === "all") {
+
             filteredCoffees.push(coffee)
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
-];
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var nameSelection = document.querySelector('#name-selection');
+
+var nameSelection = document.querySelector('#name-selection')
+// <button type="button" onClick="GetSelectedValue()">Get Selected Value</button>
+
 
 
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffeesAuto);
-nameSelection.addEventListener('change', updateCoffeesAuto())
+
+roastSelection.addEventListener('change', updateCoffees);
+nameSelection.addEventListener('keyup', updateCoffees);
+
 
 
 
