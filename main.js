@@ -54,7 +54,7 @@ function renderCoffees(coffees) {
 
 
 // Submit button Auto
-function updateCoffeesAuto(e) {
+function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = nameSelection.value;
 
@@ -74,7 +74,7 @@ function updateCoffeesAuto(e) {
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
 var nameSelection = document.querySelector('#name-selection')
